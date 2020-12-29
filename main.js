@@ -65,6 +65,42 @@ arrowUp.addEventListener('click', () => {
 });
 
 
+// Projects
+
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    };
+    console.log(filter);
+    projects.forEach((project) => {
+        console.log(project.dataset.type);
+        if (filter === '*' || filter === project.dataset.type) {
+            project.classList.remove('invisible');
+        } else {
+            project.classList.add('invisible');
+        }
+
+    });
+
+    // Same method as forEach
+    // console.log('-------------------');
+    // for (let project of projects) {
+    //     console.log(project);
+
+    // };
+
+    // console.log('-------------------');
+    // let project;
+    // for (let i = 0; i < projects.length; i++) {
+    //     project = projects[i];
+    //     console.log(project);
+
+    // }
+});
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
