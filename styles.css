@@ -100,13 +100,21 @@ p {
 /* NavBar */
 
 #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #679bce;
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    background-color: transparent;
+    transition: all var(--animation-duration) ease-in-out;
 
+}
+
+#navbar.navbar--dark {
+    background-color: var(--color-blue);
+    padding: 8px;
 }
 
 .navbar__menu {
@@ -160,6 +168,7 @@ p {
 #home {
     background: url("/imgs/background1.png") center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 
@@ -334,6 +343,7 @@ p {
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    text-align: center;
 }
 
 .category__btn.active,
