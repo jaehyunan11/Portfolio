@@ -118,10 +118,9 @@ p {
     padding: 8px;
 }
 
-.navbar__menu {
+.navbar__menu{
     display: flex;
 }
-
 
 .navbar__menu__item {
     padding: 8px 12px;
@@ -560,8 +559,8 @@ p {
     .navbar__menu {
         flex-direction: column;
         text-align: center;
+        width: 700px;
         display: none;
-        width: 100%;
     }
 
     .navbar__menu.open {
