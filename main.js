@@ -75,6 +75,7 @@ workBtnContainer.addEventListener('click', (e) => {
     if (filter == null) {
         return;
     };
+    projectContainer.classList.add('anim-out');
     console.log(filter);
     projects.forEach((project) => {
         console.log(project.dataset.type);
@@ -85,6 +86,10 @@ workBtnContainer.addEventListener('click', (e) => {
         }
 
     });
+
+    setTimeout(() => {
+        projectContainer.classList.remove('anim-out');
+    }, 300);
 
     // Same method as forEach
     // console.log('-------------------');
